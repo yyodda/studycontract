@@ -1,0 +1,317 @@
+
+*{
+	box-sizing: border-box;
+}
+
+.container{
+	width:1100px;
+	margin:0 auto;
+}
+
+header{
+	border-bottom:1px solid #ccc;
+	line-height: 80px;
+	position:relative;
+}
+header .menu{
+	position:absolute;
+	right:0;
+	top:50%;
+	transform: translateY(-50%);
+
+}
+header .logo{
+	font-weight: 700;
+	padding:5px;
+	margin-left:-5px;
+}
+
+header .menu a{
+	padding:5px;
+}
+header .menu a + a{
+	margin-left: 10px;
+}
+header .menu a + a:last-child{
+	margin-right:-5px;
+}
+header .menu a:hover{
+	color: #01AEF0;
+}
+
+
+
+
+.infoMsgBox{
+	padding:150px 0;
+	text-align: center;
+}
+
+.infoMsgBox .infoMsg{
+	color: #01AEF0;
+	font-weight: 700;
+	font-size: 26px;
+}
+
+
+
+footer{
+	text-align: center;
+	border-top:1px solid #ccc;
+	line-height: 50px;
+	background-color: #f5f5f5;
+	font-size: 14px;
+}
+
+
+.loginBox{
+	padding:100px 0;
+	text-align: center;
+}
+.loginBox.write{
+	padding:50px 0;
+
+}
+.loginBox.write .inputBox{
+	width: 450px;
+
+}
+.loginBox.write .writeTitle{
+	text-align: left;
+	padding-bottom: 20px;
+}
+.inputBox{
+	width: 300px;
+	margin: 0 auto;
+}
+.find_btn{
+	font-size: 14px;
+	margin:0 3px;
+}
+
+.row{
+	margin-bottom: 15px;
+	position:relative;
+}
+.subject {
+	text-align: left;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+.infoMsg {
+	font-size: 12px;
+	text-align: left;
+	padding-top:5px;
+	color: #01AEF0;
+}
+.idChkBtn{
+	/*position:absolute;*/
+	right:10px;
+	border:1px solid #ccc;
+	display:inline-block;
+	padding:5px;
+	background-color: #f1f1f1;
+	font-size: 12px;
+}
+.findIdResult{
+	/*display:none;*/
+	padding-top:30px;
+	font-weight: 700;
+	color: #01AEF0;
+}
+
+.labelBox{
+	text-align: left;
+}
+.labelBox label + label{
+	margin-left: 8px;
+}
+
+
+.tbox{
+	border:1px solid #ccc;
+	line-height: 30px;
+	padding:0 7px;
+	outline: none;
+	width: 230px;
+}
+
+.tbox.full{
+	width: 100%;
+}
+
+
+button.btn{
+	width: 230px;
+	line-height: 25px;
+}
+button.btn.full{
+	width: 100%;
+}
+button.btn.small{
+	width: 100px;
+}
+
+a.btn{
+	/*border:1px solid #ccc;*/
+	display:inline-block;
+	padding:4px;
+	line-height: 1;
+	background-color: #01AEF0;
+	color: #fff;
+}
+a.btn.remove{
+	background-color: #9f9f9f;
+	color: #fff;
+}
+
+
+/* 로그인 후 */
+.subMenu{
+	line-height: 35px;
+	background-color: #f3f3f3;
+	border-bottom:1px solid #ccc;
+}
+.subMenu a{
+	font-size: 14px;
+	display:inline-block;
+	margin-right:20px;
+	padding:0 10px;
+}
+
+.subMenu a:hover{
+	color: #01AEF0;
+
+}
+
+
+.filterMenu{
+	margin-bottom:25px;
+	padding-bottom:5px;
+	border-bottom:1px solid #ccc;
+}
+.filterMenu a{
+	margin-right:15px;
+	font-size: 14px;
+}
+.filterMenu a.on{
+	color: #01AEF0;
+}
+
+
+section{
+	padding:50px 30px;
+
+}
+
+
+table th{
+	background-color: #f1f1f1;
+	line-height: 30px;
+	text-align: center;
+	border-top:1px solid #ccc;
+}
+table td{
+	text-align: center;
+	line-height: 40px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #ccc;
+	font-size: 14px;
+}
+
+
+table tbody tr:nth-child(even){
+	background-color: #f9f9f9;
+}
+
+.paging{
+	margin-top: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+.paging a{
+	margin:0 5px;
+	padding:3px;
+}
+
+.paging a.on{
+	font-weight: 700;
+}
+
+.searchResultText{
+	color: #000;
+}
+
+
+.noteGroup{
+	padding:10px;
+	background-color: #f8f8f8;
+}
+
+.noteBox{
+	position:relative;
+	padding:5px 8px;
+	margin:8px 0;
+	background-color: #ffffff;
+	color: #666;
+	line-height: 25px;
+	font-size: 14px;
+
+}
+
+.noteBox .myMsg{
+	text-align: right;
+}
+.noteBox .youMsg.unChk{
+	position:relative;
+}
+.noteBox .youMsg.unChk:after{
+display: inline-block;
+	width: 5px;
+	content:'';
+	height: 5px;
+	background-color: #01AEF0;
+	line-height: 25px;
+	margin-left: 5px;
+	margin-bottom: 2px;
+}
+
+.noteMsgSendBox{
+	padding-top:10px;
+	border-top:1px solid #ccc;
+	margin-top: 10px;
+}
+.noteMsgSendBox textarea{
+	margin-bottom: 5px;
+}
+
+tr.cursor{
+	cursor: pointer;
+}
+
+
+.boardViewBox .titBox{
+	border-bottom:1px solid #ccc;
+	line-height: 40px;
+	position:relative;
+	padding:0 10px;
+
+}
+.boardViewBox .subTxt{
+	position:absolute;
+	right:10px;
+	top:50%;
+	transform: translateY(-50%);
+	font-size: 14px;
+}
+
+.boardViewBox .contentBox{
+	padding:30px 10px;
+	line-height: 20px;
+}
+
+.boardMenu{
+	text-align: right;
+	margin-bottom: 20px;
+}
+
