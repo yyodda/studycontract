@@ -19,6 +19,9 @@
 <c:set var="login" value="${path}${'login.jsp'}"/>
 <c:set var="join" value="${path}${'join.jsp'}"/>
 <c:set var="myPage" value="${path}${'myPage.jsp'}"/>
+<c:set var="search" value="${path}${'search.jsp'}"/>
+<c:set var="message" value="${path}${'message.jsp'}"/>
+<c:set var="messageInfo" value="${path}${'messageInfo.jsp'}"/>
 
 
 
@@ -41,7 +44,7 @@
             </div>
         </header>
     </c:when>
-    <c:when test="${uri eq myPage}">
+    <c:when test="${uri eq myPage||uri eq search||uri eq message||uri eq messageInfo}">
         <header>
             <a href="index" class="logo">STUDY-CONTACT</a>
             <div class="menu">

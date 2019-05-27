@@ -52,4 +52,39 @@ public class MemberService {
         JDBCTemplate.close(connection);
         return friends;
     }
+
+    public ArrayList<Member> searchToType(String searchType, String searchKeyword) throws SQLException {
+        Connection connection = JDBCTemplate.getConnection();
+        ArrayList<Member> friends = new MemberDao().searchToType(connection,searchType,searchKeyword);
+        JDBCTemplate.close(connection);
+        return friends;
+    }
+
+    public int registerFriend(String myId, String friendId) throws SQLException {
+        Connection connection = JDBCTemplate.getConnection();
+        int isfriend = new MemberDao().isfriend(connection,myId,friendId);
+        if(isfriend>0){
+            return 0;
+        }
+        else {
+            int result = new MemberDao().registerFriend(connection, myId, friendId);
+            if (result > 0) {
+                JDBCTemplate.commit(connection);
+            } else {
+                JDBCTemplate.rollback(connection);
+            }
+            return result;
+        }
+    }
+
+    public int deleteFriend(String myId, String friendId) throws SQLException {
+        Connection connection = JDBCTemplate.getConnection();
+        int result = new MemberDao().deleteFriend(connection,myId,friendId);
+        if(result>0){
+            JDBCTemplate.commit(connection);
+        }else {
+            JDBCTemplate.rollback(connection);
+        }
+        return result;
+    }
 }
